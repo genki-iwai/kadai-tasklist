@@ -32,7 +32,7 @@ public class NewServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        EntityManager em =DBUtil.createEntityManager();
+        EntityManager em = DBUtil.createEntityManager();
         em.getTransaction().begin();
 
         Task t = new Task();
@@ -49,7 +49,7 @@ public class NewServlet extends HttpServlet {
 
         //データベースに保存
         em.persist(t);
-        em.getTransaction().begin();
+        em.getTransaction().commit();
 
         //自動採番されたIDの値を表示
         response.getWriter().append(Integer.valueOf(t.getId()).toString());
