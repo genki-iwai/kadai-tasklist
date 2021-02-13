@@ -39,7 +39,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
 
     request.setAttribute("task", t);
 
-    RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/messages/show.jsp");
+    RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/show.jsp");
     rd.forward(request, response);
 }
 }
