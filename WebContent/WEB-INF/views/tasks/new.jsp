@@ -4,7 +4,7 @@
     <c:param name="content">
         <h2>新規登録</h2>
 
-        <form method="POST" action="${pageContext.request.contextPath}">
+        <form method="POST" action="${pageContext.request.contextPath}/create">
             <c:import url="_form.jsp"/>
         </form>
 
